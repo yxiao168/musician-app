@@ -20,6 +20,13 @@ router.get('/all', (req, res) => {
   });
 });
 
+
+// retrieve all musicians from data store
+router.get('/health', (req, res) => {
+  res.status('200').send("Status: OK!");  
+});
+
+
 // retrieve a musician from data store
 router.get('/:id', (req, res) => {
   const { musician } = req.app.locals;
